@@ -1,0 +1,19 @@
+{% extends 'add.html' %}
+
+
+<!-- =================== All <inputs Extended =================== -->
+<!-- Name -->
+{% block Value-name %} value="{{ patient.name }}" {% endblock Value-name %}
+<!-- Phone -->
+{% block Value-phone %} value="{{ patient.phone }}" {% endblock Value-phone %}
+<!-- Email -->
+{% block Value-email %} value="{{ patient.email }}" {% endblock Value-email %}
+<!-- Age -->
+{% block Value-age %} value="{{ patient.age }}" {% endblock Value-age %}
+<!-- Gender -->
+{% block Value-gender %}
+<option style="background-color: #d3d3d3; color: #007bff">{{ patient.gender }}</option>
+{% endblock Value-gender %}
+
+<!-- Age -->
+{% block Value-note %}{{ patient.note }}{% endblock Value-note %}
