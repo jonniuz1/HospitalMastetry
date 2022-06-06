@@ -1,5 +1,11 @@
 {% extends 'add.html' %}
 
+
+<!--- Title on the browser tab --->
+{% block title %}Edit Patient{% endblock title %}
+
+
+
 <!-- Navbar Content (icon + title) -->
 {% block nav-content %}
     <i class="fas fa-user-edit"></i>&nbsp;&nbsp; {{ patient.name }}

@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
+
+<!--- Title on the browser tab --->
+{% block title %}Add Patient{% endblock title %}
+
+
 <!-- Navbar Content (icon + title) -->
 {% block nav-content %}
     <i class="fas fa-user-plus"></i>&nbsp;&nbsp; Add Patient
 {% endblock nav-content %}
+
 
 <!-- Button in navbar -->
 {% block btn-nav %}
@@ -22,7 +28,8 @@
                         <span class="text-center">Fill out the form below</span>
                     {% endblock card-title %}
                 </div>
-                <form method="POST" {% block action %} action="{% url 'add_patient' %}" {% endblock action %} autocomplete="off" enctype="multipart/form-data"
+                <form method="POST" {% block action %} action="{% url 'add_patient' %}" {% endblock action %}
+                      autocomplete="off" enctype="multipart/form-data"
                       class="card p-3 border-dark mt-3">
                     {% csrf_token %}
                     <div class="input-group input-group-sm mb-3">
@@ -69,9 +76,9 @@
                         </button>
                         <a href="{% url 'backend' %}" class="btn btn-dark btn-sm"><i class="fas fa-chevron-left">&nbsp;&nbsp;Back</i></a>
                     </div>
-                <!-- ID Hidden -->
-                {% block id-hidden %}
-                {% endblock id-hidden %}
+                    <!-- ID Hidden -->
+                    {% block id-hidden %}
+                    {% endblock id-hidden %}
                 </form>
             </div>
         </div>
