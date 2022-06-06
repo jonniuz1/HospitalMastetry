@@ -3,10 +3,10 @@
  --------------------------------*/
 html,
 body {
-  height: 100%;
-  margin: 0;
-  max-width: 100%;
-  overflow: hidden;
+    height: 100%;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
 
 }
 
@@ -14,25 +14,25 @@ body {
  # NAVBAR
  --------------------------------*/
 
-#btn-nav{
-  width: 90px;
-  float: right;
-  margin-right: 25px;
+#btn-nav {
+    width: 90px;
+    float: right;
+    margin-right: 25px;
 }
-
 
 
 /* --------------------------------
  # FOOTER
  --------------------------------*/
-.wrapper{
-  min-height: 100%;
-  margin-bottom: -50px;
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
 }
+
 #footer,
 .push {
- height: 50px;
-  font-size: 13px;
+    height: 50px;
+    font-size: 13px;
 }
 
 
@@ -40,17 +40,17 @@ body {
  # LOGIN
  --------------------------------*/
 
-#btn-enter{
-  width: 90px;
+#btn-enter {
+    width: 90px;
 }
 
-#heart{
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
+#heart {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
 }
 
 
@@ -58,6 +58,15 @@ body {
  # BACKEND
  --------------------------------*/
 
-.side-label{
-  width: 75px;
+.side-label {
+    width: 75px;
+}
+
+#no-data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
 }

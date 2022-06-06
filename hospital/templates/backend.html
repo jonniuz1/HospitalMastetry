@@ -22,14 +22,14 @@
     <div class="d-flex justify-content-between">
         <a href="{% url 'add_patient' %}" class="btn btn-outline-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp; Add Patient</a>
         <span class="">
-            Welcome : <strong><span class="text-primary">{{ user.get_username }}</span></strong>
+            Welcome : <strong><span class="text-primary">{{ request.user.get_username }}</span></strong>
         </span>
     </div>
 
     <!-- Input Search + Button Search + Button Search -->
     <form>
         <div class="input-group input-group-sm mb-3 mt-4">
-            <input class="form-control" type="text" name="q" placeholder="Search for ...">
+            <input class="form-control" type="text" name="q" placeholder="Search for ..." value="{{ request.GET.q }}">
             <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
             <a href="{% url 'backend' %}" class="btn btn-dark" style="margin-left: 2px;"><i class="fas fa-sync-alt"></i></a>
         </div>
@@ -51,7 +51,7 @@
             </thead>
             <!-- Data from database -->
             {% for patient in patients %}
-            <tr>
+            <tr id="chk_td">
                 <td>{{ patient.name }}</td>
                 <td>{{ patient.phone }}</td>
                 <td>{{ patient.email }}</td>
@@ -64,7 +64,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="#" class="btn btn-secondary btn-sm" title="Edit patient">
+                    <a href="{% url 'delete_patient' patient.id %}" class="btn btn-secondary btn-sm" title="Delete patient">
                         <i class="fas fa-trash-alt"></i>
                     </a>
                 </td>
@@ -115,5 +115,10 @@
             </script>
         {% endif %}
     {% endfor %}
+
 </div> <!-- END // container -->
+
+    <!--- If no patient, show this span (message) --->
+    <span class="text-danger" id="no-data"></span>
+
 {% endblock content %}
